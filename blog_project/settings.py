@@ -12,6 +12,14 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+import os 
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['mets-blog.herokuapp.com']
+
+SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-secret')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
